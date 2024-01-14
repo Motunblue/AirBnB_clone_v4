@@ -14,7 +14,7 @@ app.register_blueprint(app_views)
 
 # cors = CORS(app, resources={r"/*": {"origins": "0.0.0.0"}})
 
-cores = CORS(app, resources={r"/api/v1/*": {"origins": "*"}}).
+cores = CORS(app, resources={r"/api/v1/*": {"origins": "*"}})
 
 
 @app.teardown_appcontext

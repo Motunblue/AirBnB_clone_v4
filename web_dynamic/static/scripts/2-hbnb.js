@@ -28,4 +28,15 @@ $(document).ready(function() {
             $('div.amenities h4').html('&nbsp;');
         }
     }
+
+    //Get api status and update the class, available
+    $.get('http://127.0.0.1:5001/api/v1/status/', function (data, apiStatus) {
+    if (apiStatus === 'success') {
+      if (data.status === 'OK') {
+        $('#api_status').addClass('available');
+      } else {
+        $('#api_status').removeClass('available');
+      }
+    }
+  });
 });
